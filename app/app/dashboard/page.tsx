@@ -16,9 +16,9 @@ export default function DashboardPage() {
 
   useEffect(() => {
     // Simulate async data loading
-    setBrands(brandsData.brands);
+    setBrands(brandsData.brands as Brand[]);
     
-    const metrics = metricsData.dashboardMetrics.find(
+    const metrics = (metricsData.dashboardMetrics as DashboardMetrics[]).find(
       (m) => m.brandId === selectedBrandId
     );
     setSelectedMetrics(metrics || null);

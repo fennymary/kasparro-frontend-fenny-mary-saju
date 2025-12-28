@@ -14,11 +14,12 @@ export default function AuditPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Load audit modules
-    setModules(auditData.auditModules);
+    // Load audit modules with proper type casting
+    const modules = (auditData.auditModules || []) as AuditModuleData[];
+    setModules(modules);
 
     // Find selected module
-    const module = auditData.auditModules.find(
+    const module = modules.find(
       (m) => m.id === selectedModuleId
     );
     setSelectedModuleState(module || null);

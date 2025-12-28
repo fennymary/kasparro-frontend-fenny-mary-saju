@@ -1,6 +1,6 @@
 import { AuditModuleData, AuditIssue, AuditRecommendation } from "@/types";
 import { Card, Badge, ProgressBar, ScoreDisplay } from "@/components/ui/primitives";
-import { Heading, Text, Divider } from "@/components/ui/typography";
+import { Heading, Text } from "@/components/ui/typography";
 
 interface ModuleSidebarProps {
   modules: AuditModuleData[];

@@ -1,7 +1,6 @@
 import { Brand, DashboardMetrics } from "@/types";
-import { Card, ScoreDisplay, Badge, ProgressBar } from "@/components/ui/primitives";
+import { Card, ScoreDisplay } from "@/components/ui/primitives";
 import { Heading, Text } from "@/components/ui/typography";
-import Image from "next/image";
 
 interface BrandSelectorProps {
   brands: Brand[];

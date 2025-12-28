@@ -1,7 +1,7 @@
 import React from "react";
 
 interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
-  level?: 1 | 2 | 3 | 4;
+  level?: 1 | 2 | 3 | 4 | 5 | 6;
   size?: "sm" | "md" | "lg" | "xl";
 }
 
@@ -26,6 +26,8 @@ export function Heading({
       2: "lg",
       3: "md",
       4: "sm",
+      5: "sm",
+      6: "sm",
     }[level];
 
   const HeadingTag = `h${level}` as const;
@@ -41,7 +43,7 @@ export function Heading({
 }
 
 interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
-  size?: "sm" | "base" | "lg";
+  size?: "xs" | "sm" | "base" | "lg";
   color?: "primary" | "secondary" | "muted";
   weight?: "normal" | "medium" | "semibold";
 }
@@ -55,6 +57,7 @@ export function Text({
   ...props
 }: TextProps) {
   const sizeClasses = {
+    xs: "text-xs",
     sm: "text-sm",
     base: "text-base",
     lg: "text-lg",
