@@ -1,0 +1,25 @@
+{
+  "brands": [
+    {
+      "id": "brand-001",
+      "name": "TechFlow",
+      "industry": "SaaS / Productivity",
+      "domain": "techflow.io",
+      "logoUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=100&h=100&fit=crop"
+    },
+    {
+      "id": "brand-002",
+      "name": "EcoMark",
+      "industry": "Sustainability / B2B",
+      "domain": "ecomark.co",
+      "logoUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=100&h=100&fit=crop"
+    },
+    {
+      "id": "brand-003",
+      "name": "FinanceCore",
+      "industry": "FinTech / Finance",
+      "domain": "financecore.com",
+      "logoUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=100&h=100&fit=crop"
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "auditModules": [
+    {
+      "id": "module-content",
+      "name": "Content Quality & Relevance",
+      "displayName": "Content Quality",
+      "description": "Evaluates content depth, topical authority, and AI-detection readiness",
+      "icon": "📄",
+      "score": 78,
+      "maxScore": 100,
+      "status": "pass",
+      "keyInsights": [
+        "78% of core landing pages exceed 2,000 words",
+        "Topical authority strong in 5 of 8 key verticals",
+        "AI-pattern detection shows 92% authentic content",
+        "Content freshness: 64% updated within 30 days"
+      ],
+      "issues": [
+        {
+          "id": "issue-1",
+          "severity": "medium",
+          "title": "Thin content on product comparison pages",
+          "description": "3 product comparison pages fall below 1,000 words, reducing topical depth",
+          "affectedPages": 3,
+          "impact": "Reduced keyword coverage on high-intent queries"
+        },
+        {
+          "id": "issue-2",
+          "severity": "low",
+          "title": "Missing schema markup on blog posts",
+          "description": "Blog content lacks Article schema, limiting rich snippet eligibility",
+          "affectedPages": 24,
+          "impact": "Lost CTR from rich snippets in SERPs"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "rec-1",
+          "title": "Expand comparison page content",
+          "description": "Add technical specifications, use-case breakdowns, and ROI analysis to comparison pages",
+          "priority": "high",
+          "estimatedImpact": "+15% keyword coverage on comparison queries",
+          "actionItems": [
+            "Add 500+ words of comparative analysis",
+            "Include pricing breakdown tables",
+            "Add implementation timeline sections"
+          ]
+        },
+        {
+          "id": "rec-2",
+          "title": "Implement Article schema on blog",
+          "description": "Add structured data to enable rich snippets for blog content",
+          "priority": "medium",
+          "estimatedImpact": "10-20% CTR improvement on blog search results"
+        }
+      ],
+      "executionTime": "2.3s"
+    },
+    {
+      "id": "module-eeat",
+      "name": "E-E-A-T & Trust Signals",
+      "displayName": "E-E-A-T & Trust",
+      "description": "Analyzes Experience, Expertise, Authoritativeness, and Trustworthiness signals",
+      "icon": "🏆",
+      "score": 82,
+      "maxScore": 100,
+      "status": "pass",
+      "keyInsights": [
+        "Author bios present on 95% of content",
+        "Trust certificates visible and valid",
+        "Brand mentions in authoritative sources: 127 in past 90 days",
+        "Domain authority trajectory: +2.1 points (30-day trend)"
+      ],
+      "issues": [
+        {
+          "id": "issue-3",
+          "severity": "medium",
+          "title": "Limited author expertise depth",
+          "description": "Author credentials lack quantifiable achievements or certifications",
+          "impact": "Reduced credibility signaling for E-E-A-T"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "rec-3",
+          "title": "Expand author credentials",
+          "description": "Add achievement counts, certifications, and speaking experience to author bios",
+          "priority": "high",
+          "estimatedImpact": "+5-8 points on E-E-A-T signals"
+        }
+      ],
+      "executionTime": "1.8s"
+    },
+    {
+      "id": "module-seo-basics",
+      "name": "Technical SEO & Core Web Vitals",
+      "displayName": "Technical SEO",
+      "description": "Validates Core Web Vitals, crawlability, and technical implementation",
+      "icon": "⚙️",
+      "score": 71,
+      "maxScore": 100,
+      "status": "warning",
+      "keyInsights": [
+        "LCP: 2.1s (good, target <2.5s)",
+        "FID: 85ms (needs optimization)",
+        "CLS: 0.08 (excellent)",
+        "Mobile crawlability: 98.2%"
+      ],
+      "issues": [
+        {
+          "id": "issue-4",
+          "severity": "high",
+          "title": "Elevated First Input Delay",
+          "description": "FID consistently above 80ms on mobile, particularly on homepage",
+          "affectedPages": 12,
+          "impact": "Potential ranking penalty and reduced Core Web Vitals score"
+        },
+        {
+          "id": "issue-5",
+          "severity": "medium",
+          "title": "Missing XML sitemaps for section pages",
+          "description": "5 subsections lack dedicated XML sitemaps",
+          "impact": "Slower crawl efficiency"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "rec-4",
+          "title": "Optimize JavaScript execution",
+          "description": "Defer non-critical JS, implement code splitting, and reduce main thread blocking",
+          "priority": "high",
+          "estimatedImpact": "Reduce FID to <50ms"
+        },
+        {
+          "id": "rec-5",
+          "title": "Generate section-level sitemaps",
+          "description": "Create XML sitemaps for each subsection and link from main sitemap",
+          "priority": "medium"
+        }
+      ],
+      "executionTime": "3.1s"
+    },
+    {
+      "id": "module-keyword-strategy",
+      "name": "Keyword Strategy & Coverage",
+      "displayName": "Keyword Strategy",
+      "description": "Analyzes keyword targeting, coverage gaps, and competitive positioning",
+      "icon": "🎯",
+      "score": 74,
+      "maxScore": 100,
+      "status": "pass",
+      "keyInsights": [
+        "Targeting 542 unique keywords across 127 pages",
+        "Coverage of primary verticals: 88%",
+        "Low-competition keyword gaps identified: 43 opportunities",
+        "Competitive keyword overlap: 34% with top 3 competitors"
+      ],
+      "issues": [
+        {
+          "id": "issue-6",
+          "severity": "medium",
+          "title": "Keyword cannibalization on 8 topics",
+          "description": "Multiple pages competing for same primary keywords",
+          "impact": "Diluted ranking potential per topic"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "rec-6",
+          "title": "Consolidate cannibalized content",
+          "description": "Merge or restructure pages to create clear keyword hierarchy",
+          "priority": "high",
+          "estimatedImpact": "+12% average position improvement on affected keywords"
+        }
+      ],
+      "executionTime": "2.7s"
+    },
+    {
+      "id": "module-structured-data",
+      "name": "Structured Data & Schema",
+      "displayName": "Structured Data",
+      "description": "Audits schema markup implementation and rich snippet eligibility",
+      "icon": "🏷️",
+      "score": 65,
+      "maxScore": 100,
+      "status": "warning",
+      "keyInsights": [
+        "Schema markup coverage: 52% of eligible pages",
+        "Valid schema instances: 287",
+        "Schema errors: 12",
+        "Rich snippet eligibility: 68%"
+      ],
+      "issues": [
+        {
+          "id": "issue-7",
+          "severity": "high",
+          "title": "Missing Product schema on product pages",
+          "description": "32 product pages lack Product schema markup",
+          "affectedPages": 32,
+          "impact": "Lost rich snippet opportunities for product details"
+        },
+        {
+          "id": "issue-8",
+          "severity": "medium",
+          "title": "Incorrect BreadcrumbList structure",
+          "description": "Breadcrumb schema on 18 pages has incorrect position values",
+          "affectedPages": 18
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "rec-7",
+          "title": "Implement Product schema",
+          "description": "Add Product schema with price, rating, and availability to all product pages",
+          "priority": "high",
+          "estimatedImpact": "Enable rich snippets showing price and ratings"
+        }
+      ],
+      "executionTime": "1.9s"
+    },
+    {
+      "id": "module-link-profile",
+      "name": "Link Profile & Authority",
+      "displayName": "Link Profile",
+      "description": "Evaluates backlink quality, diversity, and authority signals",
+      "icon": "🔗",
+      "score": 79,
+      "maxScore": 100,
+      "status": "pass",
+      "keyInsights": [
+        "Total referring domains: 342",
+        "High-quality backlinks (DA > 50): 84",
+        "Referring domains trend: +12 in past 30 days",
+        "Toxic link ratio: 2.1% (acceptable)"
+      ],
+      "issues": [
+        {
+          "id": "issue-9",
+          "severity": "low",
+          "title": "6 low-quality links from unrelated sites",
+          "description": "Links from directories and low-authority sites with no topical relevance",
+          "impact": "Minor authority dilution"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "rec-8",
+          "title": "Disavow low-quality links",
+          "description": "Create disavow file and submit to Google Search Console",
+          "priority": "low",
+          "estimatedImpact": "Eliminate authority dilution"
+        }
+      ],
+      "executionTime": "2.4s"
+    },
+    {
+      "id": "module-search-intent",
+      "name": "Search Intent & Alignment",
+      "displayName": "Search Intent",
+      "description": "Analyzes content alignment with user search intent and SERP patterns",
+      "icon": "💡",
+      "score": 76,
+      "maxScore": 100,
+      "status": "pass",
+      "keyInsights": [
+        "82% of content aligns with primary search intent",
+        "Search intent distribution: Informational 45%, Commercial 35%, Transactional 20%",
+        "SERP feature presence: 56% of tracked keywords have rich snippets",
+        "Intent mismatch pages: 8"
+      ],
+      "issues": [
+        {
+          "id": "issue-10",
+          "severity": "medium",
+          "title": "Misaligned content on 5 high-value keywords",
+          "description": "Content written for informational intent but user searches show commercial intent",
+          "affectedPages": 5,
+          "impact": "High bounce rate on these pages"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "rec-9",
+          "title": "Reformat content for commercial intent",
+          "description": "Add comparison tables, pricing information, and CTA elements to misaligned pages",
+          "priority": "high",
+          "estimatedImpact": "Reduce bounce rate by 20-30%"
+        }
+      ],
+      "executionTime": "2.2s"
+    }
+  ]
+}

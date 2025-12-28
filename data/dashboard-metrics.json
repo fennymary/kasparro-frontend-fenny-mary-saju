@@ -1,0 +1,28 @@
+{
+  "dashboardMetrics": [
+    {
+      "brandId": "brand-001",
+      "aiVisibilityScore": 78,
+      "trustEeatScore": 82,
+      "nonBrandedCoverage": 64,
+      "lastAuditDate": "2025-12-27T14:30:00Z",
+      "trendDirection": "up"
+    },
+    {
+      "brandId": "brand-002",
+      "aiVisibilityScore": 62,
+      "trustEeatScore": 71,
+      "nonBrandedCoverage": 48,
+      "lastAuditDate": "2025-12-28T10:15:00Z",
+      "trendDirection": "stable"
+    },
+    {
+      "brandId": "brand-003",
+      "aiVisibilityScore": 85,
+      "trustEeatScore": 88,
+      "nonBrandedCoverage": 76,
+      "lastAuditDate": "2025-12-26T09:00:00Z",
+      "trendDirection": "up"
+    }
+  ]
+}
