@@ -196,7 +196,7 @@ export default function ArchitecturePage() {
             <Text weight="medium" size="sm" className="mb-3">
               📊 Dashboard
             </Text>
-            <ul className="space-y-2 text-xs text-slate-600">
+            <ul className="space-y-2 text-sm text-slate-600">
               <li>• Real-time brand snapshots</li>
               <li>• Metric trends over time</li>
               <li>• Quick insight cards</li>
@@ -207,7 +207,7 @@ export default function ArchitecturePage() {
             <Text weight="medium" size="sm" className="mb-3">
               📋 Audit Reports
             </Text>
-            <ul className="space-y-2 text-xs text-slate-600">
+            <ul className="space-y-2 text-sm text-slate-600">
               <li>• Deep module analysis</li>
               <li>• Issue documentation</li>
               <li>• Actionable recommendations</li>
@@ -218,7 +218,7 @@ export default function ArchitecturePage() {
             <Text weight="medium" size="sm" className="mb-3">
               🔌 API Access
             </Text>
-            <ul className="space-y-2 text-xs text-slate-600">
+            <ul className="space-y-2 text-sm text-slate-600">
               <li>• Structured JSON responses</li>
               <li>• Custom integrations</li>
               <li>• Programmatic access</li>
@@ -229,7 +229,7 @@ export default function ArchitecturePage() {
             <Text weight="medium" size="sm" className="mb-3">
               📧 Scheduled Reports
             </Text>
-            <ul className="space-y-2 text-xs text-slate-600">
+            <ul className="space-y-2 text-sm text-slate-600">
               <li>• Weekly/monthly snapshots</li>
               <li>• Trend analysis</li>
               <li>• Key alerts</li>
