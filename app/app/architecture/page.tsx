@@ -33,7 +33,7 @@ export default function ArchitecturePage() {
                   <Text weight="medium" size="sm">
                     Website Crawl
                   </Text>
-                  <Text size="xs" color="secondary">
+                  <Text size="sm" color="secondary">
                     Full HTML, CSS, JS analysis
                   </Text>
                 </div>
@@ -44,7 +44,7 @@ export default function ArchitecturePage() {
                   <Text weight="medium" size="sm">
                     Performance Metrics
                   </Text>
-                  <Text size="xs" color="secondary">
+                  <Text size="sm" color="secondary">
                     CWV, Lighthouse, PageSpeed
                   </Text>
                 </div>
@@ -55,7 +55,7 @@ export default function ArchitecturePage() {
                   <Text weight="medium" size="sm">
                     Link Analysis
                   </Text>
-                  <Text size="xs" color="secondary">
+                  <Text size="sm" color="secondary">
                     Backlink profiles, RD, authority
                   </Text>
                 </div>
@@ -66,7 +66,7 @@ export default function ArchitecturePage() {
                   <Text weight="medium" size="sm">
                     Competitive Landscape
                   </Text>
-                  <Text size="xs" color="secondary">
+                  <Text size="sm" color="secondary">
                     SERP features, competitor analysis
                   </Text>
                 </div>
@@ -81,7 +81,7 @@ export default function ArchitecturePage() {
               <Text size="sm" weight="medium" className="mb-2">
                 Unified Input Model
               </Text>
-              <Text size="xs" color="secondary">
+              <Text size="sm" color="secondary">
                 All data normalized into consistent, typed schemas ready for module processing
               </Text>
             </div>
@@ -101,7 +101,7 @@ export default function ArchitecturePage() {
               <Text weight="medium" size="sm" className="mb-2">
                 📝 Content Semantics
               </Text>
-              <Text size="xs" color="secondary">
+              <Text size="sm" color="secondary">
                 Entity extraction, topical mapping, keyword relationships
               </Text>
             </div>
@@ -109,7 +109,7 @@ export default function ArchitecturePage() {
               <Text weight="medium" size="sm" className="mb-2">
                 👤 Authority Signals
               </Text>
-              <Text size="xs" color="secondary">
+              <Text size="sm" color="secondary">
                 Author credentials, E-E-A-T markers, brand signals
               </Text>
             </div>
@@ -117,7 +117,7 @@ export default function ArchitecturePage() {
               <Text weight="medium" size="sm" className="mb-2">
                 ⚡ Technical Readiness
               </Text>
-              <Text size="xs" color="secondary">
+              <Text size="sm" color="secondary">
                 Crawlability, indexability, performance scores
               </Text>
             </div>
@@ -125,7 +125,7 @@ export default function ArchitecturePage() {
               <Text weight="medium" size="sm" className="mb-2">
                 🎯 Intent Alignment
               </Text>
-              <Text size="xs" color="secondary">
+              <Text size="sm" color="secondary">
                 Query matching, SERP features, user intent
               </Text>
             </div>
@@ -156,7 +156,7 @@ export default function ArchitecturePage() {
                     <Text weight="medium" size="sm">
                       {mod.title}
                     </Text>
-                    <Text size="xs" color="secondary">
+                    <Text size="sm" color="secondary">
                       Focus: {mod.focus}
                     </Text>
                   </div>
