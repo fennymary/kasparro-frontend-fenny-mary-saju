@@ -13,7 +13,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
+    "font-medium rounded-lg transition-colors duration-200 ease-in-out motion-reduce:transition-none motion-safe:transform motion-safe:hover:scale-105 transform-gpu focus:outline-none focus:ring-2 focus:ring-offset-2 focus-visible:outline-none";
 
   const variants = {
     primary:
@@ -52,7 +52,7 @@ export function Card({
   ...props
 }: CardProps) {
   return (
-    <div className={`card-elevated p-6 ${className}`} {...props}>
+    <div className={`card-elevated p-6 transform-gpu transition-transform duration-200 ease-out hover:-translate-y-1 ${className}`} {...props}>
       {title && <h3 className="text-lg font-semibold mb-2">{title}</h3>}
       {description && (
         <p className="text-slate-600 text-sm mb-4">{description}</p>
@@ -108,8 +108,8 @@ export function ScoreDisplay({
   };
 
   return (
-    <div className={`flex items-center justify-center rounded-full bg-slate-100 ${sizes[size]}`}>
-      <div className={`font-bold ${getColor()}`}>{Math.round(score)}</div>
+    <div role="img" aria-live="polite" aria-label={`Score: ${Math.round(score)} out of ${maxScore}`} className={`flex items-center justify-center rounded-full bg-slate-100 ${sizes[size]} motion-safe:transition-transform motion-reduce:transition-none transform-gpu`}>
+      <div className={`font-bold ${getColor()} transition-transform duration-300 ease-out`}>{Math.round(score)}</div>
     </div>
   );
 }
@@ -139,10 +139,10 @@ export function ProgressBar({
           <span className="text-sm text-slate-600">{Math.round(percentage)}%</span>
         </div>
       )}
-      <div className="w-full bg-slate-200 rounded-full h-2">
+      <div className="w-full bg-slate-200 rounded-full h-2 overflow-hidden" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(percentage)} aria-label={label || "Progress"}>
         <div
-          className={`h-2 rounded-full transition-all duration-300 ${getColor()}`}
-          style={{ width: `${Math.min(percentage, 100)}%` }}
+          className={`h-2 rounded-full transform-gpu origin-left transition-transform duration-500 ease-in-out motion-reduce:transition-none ${getColor()}`}
+          style={{ transform: `scaleX(${Math.min(percentage, 100) / 100})` }}
         />
       </div>
     </div>

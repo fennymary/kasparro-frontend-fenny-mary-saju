@@ -1,12 +1,18 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Heading, Text } from "@/components/ui/typography";
 
 export function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="border-b border-slate-200 bg-white sticky top-0 z-40">
+      {/* Skip link for keyboard users */}
+      <a href="#main" className="sr-only focus:not-sr-only focus:fixed top-4 left-4 z-50 bg-white text-sm px-3 py-2 rounded shadow">Skip to content</a>
       <div className="container-section py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 rounded-lg gradient-brand flex items-center justify-center">
+          <div className="w-8 h-8 rounded-lg gradient-brand flex items-center justify-center motion-safe:transform motion-safe:hover:scale-105 motion-reduce:transition-none">
             <span className="text-white font-bold text-lg">K</span>
           </div>
           <div className="flex flex-col">
@@ -17,22 +23,25 @@ export function Header() {
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav role="navigation" aria-label="Main navigation" className="hidden md:flex items-center gap-8">
           <Link
             href="/"
-            className="text-slate-600 hover:text-slate-900 font-medium transition-colors"
+            aria-current={pathname === "/" ? "page" : undefined}
+            className="text-slate-600 hover:text-slate-900 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
           >
             Home
           </Link>
           <Link
             href="/platform"
-            className="text-slate-600 hover:text-slate-900 font-medium transition-colors"
+            aria-current={pathname === "/platform" ? "page" : undefined}
+            className="text-slate-600 hover:text-slate-900 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
           >
             Platform
           </Link>
           <Link
             href="/about"
-            className="text-slate-600 hover:text-slate-900 font-medium transition-colors"
+            aria-current={pathname === "/about" ? "page" : undefined}
+            className="text-slate-600 hover:text-slate-900 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
           >
             About
           </Link>
@@ -40,7 +49,8 @@ export function Header() {
 
         <Link
           href="/app/dashboard"
-          className="px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 font-medium transition-colors"
+          aria-label="Open dashboard"
+          className="px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 font-medium transition-colors motion-safe:transform motion-safe:hover:scale-105 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
         >
           Dashboard
         </Link>

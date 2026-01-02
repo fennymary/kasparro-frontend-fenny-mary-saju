@@ -6,7 +6,11 @@ export const metadata: Metadata = {
   title: "Kasparro - AI-First SEO Intelligence",
   description:
     "AI-native SEO and brand intelligence platform that translates how AI reads your content into actionable insights.",
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

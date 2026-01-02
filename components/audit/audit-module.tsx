@@ -24,15 +24,19 @@ export function ModuleSidebar({
           <button
             key={module.id}
             onClick={() => onSelectModule(module.id)}
-            className={`w-full text-left px-4 py-3 rounded-lg transition-all border-2 ${
+            aria-pressed={isSelected}
+            aria-controls="module-detail"
+            aria-label={`Select module ${module.displayName}`}
+            style={{ willChange: 'transform' }}
+            className={`w-full text-left px-4 py-3 rounded-lg transform-gpu transition-transform duration-200 ease-out motion-safe:hover:scale-105 motion-reduce:transition-none border-2 ${
               isSelected
-                ? "border-brand-600 bg-brand-50 text-slate-900"
+                ? "border-brand-600 bg-brand-50 text-slate-900 ring-2 ring-offset-2 ring-brand-200"
                 : "border-transparent bg-slate-50 text-slate-700 hover:bg-slate-100"
-            }`}
+            } focus-visible:outline-none focus-visible:ring-2`}
           >
             <div className="flex items-start justify-between gap-2">
               <div>
-                <div className="font-medium text-sm">{module.icon} {module.displayName}</div>
+                <div className="font-medium text-sm"><span aria-hidden="true">{module.icon}</span> {module.displayName}</div>
                 <div className="text-xs text-slate-500 mt-1">
                   Score: {module.score}/{module.maxScore}
                 </div>
@@ -55,7 +59,7 @@ interface ModuleDetailProps {
 export function ModuleDetail({ module }: ModuleDetailProps) {
   if (!module) {
     return (
-      <div className="card-elevated p-12 text-center">
+      <div id="module-detail" className="card-elevated p-12 text-center">
         <Heading level={3} size="sm" className="mb-2">
           Select a Module
         </Heading>
@@ -67,12 +71,12 @@ export function ModuleDetail({ module }: ModuleDetailProps) {
   }
 
   return (
-    <div className="space-y-8">
+    <div id="module-detail" className="space-y-8">
       {/* Header */}
       <div className="card-elevated p-6">
         <div className="flex items-start justify-between mb-6">
           <div>
-            <div className="text-3xl mb-2">{module.icon}</div>
+            <div className="text-3xl mb-2" aria-hidden="true">{module.icon}</div>
             <Heading level={2} size="lg" className="mb-2">
               {module.name}
             </Heading>
